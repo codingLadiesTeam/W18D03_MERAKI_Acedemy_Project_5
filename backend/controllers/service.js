@@ -27,6 +27,12 @@ const createService = (req, res) => {
     });
 };
 
+// this function to  get all services from the database
+// End Point : GET /services
+const getServices = (req, res) => {
+    
+}
+
 module.exports = {
   createService,
 };
