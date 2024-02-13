@@ -2,94 +2,42 @@ const { pool } = require("../models/db");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
+// CREATE TABLE users (
+//   user_id SERIAL NOT NULL,
+//   userName VARCHAR (255),
+//   email VARCHAR(255) UNIQUE NOT NULL,
+//   password VARCHAR (255),
+//   is_deleted SMALLINT DEFAULT 0,
+//   role INT,
+//   FOREIGN KEY (role) REFERENCES roles (role_id),
+//   PRIMARY KEY (user_id)
+// );
 const register = async (req, res) => {
-  const { firstName, lastName, age, country, email, password, role_id } =
+  const { userName, email, password ,role} =
     req.body;
-    const result = await bcrypt.hash(password, 8);
-
+// const role_id=''// edit the value of role_id depend on role id in role table .
+  const encryptedPassword = await bcrypt.hash(password, 7);
+  const query = `INSERT INTO users ( userName, email, password ,role) VALUES ($1,$2,$3,$4)`;
   const data = [
-    firstName,
-    lastName,
-    age,
-    country,
-    email,
-    result,
-    role_id,
+   userName,
+    email.toLowerCase(),
+    encryptedPassword,
+    role
   ];
   pool
-    .query(
-      `INSERT INTO users (firstName, lastName, age, country, email, password, role_id) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING * `,
-      data
-    )
+    .query(query, data)
     .then((result) => {
-      if (!email) {
-        res.status(409).json({
-          success: false,
-          message: "The email already exists",
-        });
-      } else {
-        res.status(201).json({
-          success: true,
-          message: "Account created successfully",
-          result:result.rows
-        });
-      }
-    }).catch((err)=>{
-      console.log(err)
       res.status(200).json({
-        success:false,
-        err:err,
-        message:"server error"
-      })
-    })
-};
-
-const login = (req, res) => {
-const{email,password}=req.body;
-// const data1=[email,password];
-pool.query(`SELECT * FROM users WHERE email=$1`,email)
-.then(async(result)=>{
-  if(!email){
-     res.status(403).json({
-      success: false,
-      message: `The email doesn't exist or The password you’ve entered is incorrect`,
-    });
-  }
-  try {
-    const valid = await bcrypt.compare(password, result.password);
-    if (!valid) {
-      return res.status(403).json({
-        success: false,
-        message: `The email doesn't exist or The password you’ve entered is incorrect`,
+        success: true,
+        message: "Account created successfully",
       });
-    }
-    const payload = {
-      userId: result._id,
-      role: result.role,
-      country: result.country,
-    };
-
-    const options = {
-      expiresIn: "60m",
-    };
-    const token = jwt.sign(payload, process.env.SECRET, options);
-    res.status(200).json({
-      success: true,
-      message: `Valid login credentials`,
-      token: token,
-      userId: result._id
-    });
-  } catch (error) {
-    throw new Error(error.message);
-  }
-}).catch((err)=>{
-res.status(500).json({
-  message:false,
-  err:err
-})
-})
-
+    })
+    .catch((err) => {
+      res.status(409).json({
+        success: false,
+        message: "The email already exists",
+        err,
+      });
+    });
 };
-
-module.exports = {register,login};
-
+module.exports={register}
