@@ -1,5 +1,4 @@
 import React from "react";
- 
 
 const Footer2 = () => {
   return (
@@ -65,102 +64,274 @@ const Footer2 = () => {
                 display: "grid",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "80vh",
+                height: "70vh",
                 fontFamily: "Arial, Helvetica, sans-serif",
               }}
             >
               <div
                 className="container"
+                href="https://www.pinterest.com/FarahEvents/_created/"
                 style={{
-                  backgroundColor: "#f4f4f4f4",
+                  backgroundColor: "#ffff",
                   maxWidth: "700% !important",
-                  height: "75vh",
+                  height: "65vh",
                   display: "flex",
-                  borderRadius:'2rem',
-                  flexDirection:'column'
+                  borderRadius: "2rem",
+                  flexDirection: "column",
+                  cursor: "pointer",
                 }}
               >
-                <div
-                  className="info__card "
+                <a
+                  href="https://www.pinterest.com/FarahEvents/_created/"
                   style={{
-                    display: "flex",
-                    
-                    // padding: "0 4px",
+                    textDecoration: "none",
+                    cursor: "pointer",
+                    color: "#000",
+                  }}
+                  target="_blank"
+                >
+                  <div
+                    className="info__card "
+                    style={{
+                      display: "flex",
 
-                    // alignItems: "center",
-                    // lineHeight: "1.5",
-                    // paddingBottom: "4px",
-                  }}
-                >
-                  <div className="prfile__pic " >
-                    <img
-                      className="prfile__pic--img"
-                      src="https://i.pinimg.com/280x280_RS/01/c6/aa/01c6aae2831328a1450bd5c0ca954919.jpg"
-                      alt="Mahmoud Abuyoussef Image"
-                      style={{
-                        width: "40px",
-                        height: "40px",
-                        borderRadius: "48%",
-                        marginRight: "10px",
-                        marginTop:'10px'
-                      }}
-                    />
-                  </div>
-                  <div className="profile__info col-8" style={{color:'#000',fontSize:'12px',width:'50%',display:'flex',flexWrap:'wrap'}}>
-                    <span style={{fontWeight:'bold',fontSize:'14px ',marginTop:'10px',left:'65px',textAlign:'left',}}>Mahmoud Abuyoussef</span>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-                <div className="aroundphoto" style={{padding:'0 10px',overflowY:'scroll'}}>
-                <div
-                  className="images"
-                  style={{
-                    marginTop:'10px'
-                  }}
-                >
-                  <a
-                    href="https://www.pinterest.com/pin/15-easy-and-cool-casual-outfits-for-everyday-looks--939211697272426290/"
-                    target="_blank"
+                      // padding: "0 4px",
+
+                      // alignItems: "center",
+                      // lineHeight: "1.5",
+                      // paddingBottom: "4px",
+                    }}
                   >
-                    <img
-                      src="https://adornmentevents.com/wp-content/uploads/ae-gallery-evergreen-16.jpg"
-                      alt="img"
-                      height='50%'
-                      width='35%'
-                      style={{ borderRadius: '10px',
-                        /* width: calc((100%) / 2); */
-                        marginRight: '2px'}}
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="https://adornmentevents.com/wp-content/uploads/gallery2023-lodge-77.jpg"
-                      alt="img"
-                      height='60%'
-                      width='40%'
-                      style={{ borderRadius: '10px',
-                        /* width: calc((100%) / 2); */
-                        marginRight: '2px'}}
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="https://adornmentevents.com/wp-content/uploads/ae-gallery-pacific-city-12.jpg"
-                      alt="img"
-                      height='70%'
-                      width='30%'
-                      style={{ borderRadius: '10px',
-                        /* width: calc((100%) / 2); */
-                        marginRight: '2px'}}
-                    />
-                  </a>
-                </div>
-                <div className="follow__brand PIN_1709163849920_label PIN_1709163849920_bottom "style={{  textAlign: 'center',
-    color: '#8f7d7d',
-    paddingTop: '135px'}}>
-                <button> Follow On <img className="brand__img" src="brand.png" /></button> 
-                </div> 
-                </div>
+                    <div className="prfile__pic ">
+                      <a
+                        href="https://www.pinterest.com/FarahEvents/_created/"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          className="prfile__pic--img"
+                          src="https://i.pinimg.com/280x280_RS/01/c6/aa/01c6aae2831328a1450bd5c0ca954919.jpg"
+                          style={{
+                            width: "40px",
+                            height: "40px",
+                            borderRadius: "48%",
+                            marginRight: "10px",
+                            marginTop: "10px",
+                          }}
+                        />
+                      </a>
+                    </div>
+                    <div
+                      className="profile__info col-8"
+                      style={{
+                        color: "#000",
+                        fontSize: "12px",
+                        width: "50%",
+                        display: "flex",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "14px ",
+                          marginTop: "10px",
+                          left: "65px",
+                          textAlign: "left",
+                        }}
+                      >
+                        <a
+                          href="https://www.pinterest.com/FarahEvents/_created/"
+                          style={{
+                            textDecoration: "none",
+                            cursor: "pointer",
+                            color: "#000",
+                          }}
+                          target="_blank"
+                        >
+                          Farah For Events{" "}
+                        </a>{" "}
+                      </span>
+                      <a
+                        href="https://www.pinterest.com/FarahEvents/_created/"
+                        style={{ textDecoration: "none" }}
+                        target="_blank"
+                      >
+                        <p style={{ cursor: "pointer", color: "#000" }}>
+                          {" "}
+                          For Event Planning & Design{" "}
+                        </p>
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className="aroundphoto"
+                    style={{ padding: "0 10px", overflowY: "scroll", }}
+                  >
+                    <div
+                      className="images"
+                      style={{
+                        marginTop: "10px",
+                      }}
+                    >
+                      <a
+                        href="https://i.pinimg.com/736x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          src="https://i.pinimg.com/474x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                          alt="img"
+                          height="50%"
+                          width="30%"
+                          style={{
+                            borderRadius: "10px",
+                            /* width: calc((100%) / 2); */
+                            marginRight: "2px",
+                            marginBottom:'1px'
+                          }}
+                        />
+                      </a>
+                      <a
+                        href="https://i.pinimg.com/736x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          src="https://i.pinimg.com/474x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                          alt="img"
+                          height="40%"
+                          width="35%"
+                          style={{
+                            borderRadius: "10px",
+                            /* width: calc((100%) / 2); */
+                            marginRight: "2px",
+                            marginBottom:'2px'
+                          }}
+                        />
+                      </a>
+                      <a
+                        href="https://i.pinimg.com/736x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          src="https://i.pinimg.com/474x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                          alt="img"
+                          height="50%"
+                          width="30%"
+                          style={{
+                            borderRadius: "10px",
+                            /* width: calc((100%) / 2); */
+                            marginRight: "2px",
+                          }}
+                        />
+                      </a>
+                      <a
+                        href="https://i.pinimg.com/736x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          src="https://i.pinimg.com/474x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                          alt="img"
+                          height="50%"
+                          width="30%"
+                          style={{
+                            borderRadius: "10px",
+                            /* width: calc((100%) / 2); */
+                            marginRight: "2px",
+                          }}
+                        />
+                      </a>
+                      <a
+                        href="https://i.pinimg.com/736x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                        <img
+                          src="https://i.pinimg.com/474x/bb/75/4a/bb754acad90a4cbbb70ab743b2557dad.jpg"
+                          alt="img"
+                          height="0%"
+                          width="30%"
+                          style={{
+                            borderRadius: "10px",
+                            /* width: calc((100%) / 2); */
+                            marginRight: "2px",
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className="follow__brand PIN_1709163849920_label PIN_1709163849920_bottom "
+                    style={{
+                      textAlign: "center",
+                      color: "#8f7d7d",
+                      paddingTop: "73px",
+                    }}
+                  >
+                    <button
+                      className="btn draw-border"
+                      style={{
+                        width: "100%",
+                        border: "none",
+                        backgroundColor: "#e5e0e0",
+                        borderRadius: "20px",
+                        height: "87%",
+                        fontSize: "12px",
+                        alignItems: "center",
+                      }}
+                    >
+                      <a
+                        href="https://www.pinterest.com/FarahEvents/_created/"
+                        style={{
+                          textDecoration: "none",
+                          cursor: "pointer",
+                          color: "#000",
+                        }}
+                        target="_blank"
+                      >
+                      {" "}
+                      Follow On{" "}
+                      <img
+                        className="brand__img"
+                        style={{
+                          width: "90px",
+                          height: "27px",
+                          alignItems: "center",
+                          paddingBottom: "3px",
+                        }}
+                        src="https://res.cloudinary.com/dycpjbdto/image/upload/v1709214002/pin-removebg-preview_k7pvmj.png"
+                      />
+                      </a>
+                    </button>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -171,7 +342,7 @@ const Footer2 = () => {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2" }}
       >
-        © 2020 Copyright:
+        © 2024 Copyright:
         <a className="text-white" href="https://mdbootstrap.com/">
           FarhEvents.com
         </a>
