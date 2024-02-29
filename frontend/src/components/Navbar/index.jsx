@@ -62,7 +62,7 @@ const Navbar = () => {
         <div style={{display:"flex", justifyContent:'space-around' }}>
         <MDBCollapse navbar open={openNavSecond}>
           <MDBNavbarNav>
-            <MDBNavbarLink active aria-current='page' href='/'>
+            <MDBNavbarLink  href='/'>
               Home
             </MDBNavbarLink>
             <MDBNavbarToggler
