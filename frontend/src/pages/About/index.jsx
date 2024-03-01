@@ -1,55 +1,132 @@
 const About = () => {
   return (
-    <div>
+    <div className="aboutus">
+      <div class="container my-5">
+        <section class="team-section text-center dark-grey-text">
+          <h3 class="font-weight-bold pb-2 mb-4" style={{textAlign:'center'}}>Our amazing team</h3>
+          <p class="text-muted w-responsive mx-auto mb-5" style={{textAlign:'center'}}>
+          Our team has worked in the Portland area for over 15 years in weddings and special events. We’ve done everything from an orchard country wedding of 20 people, to managing high-touch corporate galas and multi-day events. Our foundation of events is built on providing a full-service and freshly creative team to our special clients.
+          </p>
 
-<div className="container z-depth-1 py-5 my-5">
-  <section className="mx-md-5 text-center text-lg-left">
-    <div className="row d-flex justify-content-center">
-      <div className="col-md-12">
-        <div className="row p-5">
-          <div className="col-lg-8 d-flex flex-column justify-content-between">
-            <p className="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div>
-              <p className="font-weight-bold lead mb-2"><strong>Anna Smith</strong></p>
-              <p className="font-weight-bold text-muted">Product manager</p>
+          <div class="row text-center text-md-left">
+            <div class="col-lg-6 col-md-12 mb-5 d-md-flex justify-content-between">
+              <div class="avatar mb-md-0 mb-4 mx-4">
+                <img
+                  src="https://res.cloudinary.com/dycpjbdto/image/upload/v1709316701/687925c5729ebf9e19062a8b282eda32_exnp2e.jpg"
+                  class="rounded z-depth-1"
+                  alt="Sample avatar"
+                  style={{height:'255px',width:'250px'}}
+                />
+              </div>
+              <div class="mx-4">
+                <h4 class="font-weight-bold mb-3">Hadeel</h4>
+                <h6 class="font-weight-bold grey-text mb-3">Event Manager/Coordinator</h6>
+                <p class="grey-text">
+                Coordinates with all team members and ensures that everything is on track.
+                </p>
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+                <a class="p-2 fa-lg tw-ic">
+                  <i class="fab fa-twitter"> </i>
+                </a>
+                <a class="p-2 fa-lg dribbble-ic">
+                  <i class="fab fa-dribbble"> </i>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 mb-5 d-md-flex justify-content-between">
+              <div class="avatar mb-md-0 mb-4 mx-4">
+                <img
+                  src="https://res.cloudinary.com/dycpjbdto/image/upload/v1709316534/5932df9f2063253419bd759f796d0fee_xycqjn.jpg"
+                  class="rounded z-depth-1"
+                  alt="Sample avatar"
+                  style={{height:'255px',width:'250px'}}
+                />
+              </div>
+              <div class="mx-4">
+                <h4 class="font-weight-bold mb-3">Amal</h4>
+                <h6 class="font-weight-bold grey-text mb-3">Marketing and Promotion Specialist</h6>
+                <p class="grey-text">
+                Manages social media accounts, email campaigns, and other promotional activities.
+                </p>
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+                <a class="p-2 fa-lg yt-ic">
+                  <i class="fab fa-youtube"> </i>
+                </a>
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram"> </i>
+                </a>
+              </div>
             </div>
           </div>
-          <div className="col-lg-4 d-flex mb-2 align-items-center">
-              <div className="avatar mx-4 w-100 white d-flex justify-content-center align-items-center">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" className="rounded-circle img-fluid z-depth-1" alt="woman avatar"/>
+
+   
+          <div class="row text-center text-md-left">
+            <div class="col-lg-6 col-md-12 mb-5 d-md-flex justify-content-between">
+              <div class="avatar mb-md-0 mb-4 mx-4">
+                <img
+                  src="https://res.cloudinary.com/dycpjbdto/image/upload/v1709317342/ae026bba8865bf47708772c0a5721ead_orx7ld.jpg"
+                  class="rounded z-depth-1"
+                  alt="Sample avatar"
+                  style={{height:'255px',width:'250px'}}
+                />
+              </div>
+              <div class="mx-4">
+                <h4 class="font-weight-bold mb-3">Aya</h4>
+                <h6 class="font-weight-bold grey-text mb-3">Program and Content Manager</h6>
+                <p class="grey-text">
+                Coordinates with speakers, presenters, and performers.
+                </p>
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+                <a class="p-2 fa-lg tw-ic">
+                  <i class="fab fa-twitter"> </i>
+                </a>
+                <a class="p-2 fa-lg dribbble-ic">
+                  <i class="fab fa-dribbble"> </i>
+                </a>
               </div>
             </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 
-<div className="container py-5 my-5">
-  <section className="p-md-5 mx-md-5 text-center text-lg-left grey z-depth-1"
-   >
-    <div className="row d-flex justify-content-center">
-      <div className="col-md-12">
-            <div className="row">
-              <div className="col-lg-4 d-flex mb-2 align-items-center">
-                <div className="avatar mx-4 w-100 white d-flex justify-content-center align-items-center">
-                  <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" className="rounded-circle img-fluid z-depth-1" alt="woman avatar"/>
-                </div>
+            <div class="col-lg-6 col-md-12 mb-5 d-md-flex justify-content-between">
+              <div class="avatar mb-md-0 mb-4 mx-4">
+                <img
+                  src="https://res.cloudinary.com/dycpjbdto/image/upload/v1709317342/82411b181c7f1f6e01b80ac535ba3396_fbd5ji.jpg"
+                  class="rounded z-depth-1"
+                  alt="Sample avatar"
+                  style={{height:'255px',width:'250px'}}
+                />
               </div>
-              <div className="col-lg-8">
-                <p className="text-muted font-weight-light mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae
-                  numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam.</p>
-                <p className="font-weight-bold lead mb-2"><strong>Anna Smith</strong></p>
-              	<p className="font-weight-bold text-muted mb-0">Product manager</p>
+              <div class="mx-4">
+                <h4 class="font-weight-bold mb-3">Bushra</h4>
+                <h6 class="font-weight-bold grey-text mb-3">Hospitality Coordinator</h6>
+                <p class="grey-text">
+                Manages guest services, including VIP arrangements and special accommodations.
+                </p>
+                <a class="p-2 fa-lg fb-ic">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+                <a class="p-2 fa-lg yt-ic">
+                  <i class="fab fa-youtube"> </i>
+                </a>
+                <a class="p-2 fa-lg ins-ic">
+                  <i class="fab fa-instagram"> </i>
+                </a>
               </div>
             </div>
+          </div>
+
+        
+        </section>
       </div>
+     
     </div>
-  </section>
-</div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default About
+export default About;

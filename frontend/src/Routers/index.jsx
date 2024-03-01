@@ -17,7 +17,6 @@ import CreatePackage from "../pages/createPackage"
 import AdminServicesRender from "../pages/AdminServicesRender"
 
 // import Service from "../pages/Service/Service"
-// import PortFolio from "../pages/PortFolio"
 import Talk from "../pages/LetsTalk"
 import About from "../pages/About"
 import Navbar from "../components/Navbar"
@@ -28,7 +27,9 @@ import OrdersTable from "../pages/adminOrder"
 
 import ServiceProviderOrders from "../pages/ServiceProviderOrder"
 
-
+import Portfolio from "../pages/PortFolio"
+import Footer2 from "../components/Footer/Footer2"
+import Comp404 from "../pages/NotFound"
 export const router= createBrowserRouter(
 [
    {
@@ -72,19 +73,24 @@ export const router= createBrowserRouter(
       path:"/portfolio",
       element: 
       <> <Navbar/>
-      {/* <PortFolio/> */}
+       <Portfolio/> 
+       <Footer2/>
       </>
   },
   {
    path:"/letstalk",
    element:<> <Navbar/>
    <Talk/>
+   <Footer2/>
+
    </> 
 },
 {
    path:"/AboutUs",
    element: <> <Navbar/>
    <About/>
+   <Footer2/>
+
    </>
 },
     { 
@@ -115,6 +121,8 @@ export const router= createBrowserRouter(
         element:<>
         <Navbar/>
         <Client/>
+        <Footer2/>
+
         </>
 
      },
@@ -149,7 +157,14 @@ export const router= createBrowserRouter(
       element:<>
       <Navbar/>
       <CreatePackage/></>
-    }
+    },
+    {
+      path:"*",
+      element: 
+      <Comp404/>
+   
+     
+   },
 
 ]
 

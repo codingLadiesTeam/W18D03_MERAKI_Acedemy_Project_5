@@ -8,8 +8,8 @@
 }
 
 :root {
-  --primary:#469da3;
-  
+  --primary: #469da3;
+
   --white: #ffffff;
   --bg: #f5f5f5;
 }
@@ -38,22 +38,18 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 1.3rem;
+  width: 8px;
+  background-color: #ddd;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
-  background: #797979;
-  transition: all 0.5s ease-in-out;
+  background: #333;
 }
 
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: #222224;
-}
-
-::-webkit-scrollbar-track {
-  background: #797979;
-}
+} */
 
 body {
   font-size: 1.6rem;
@@ -168,7 +164,7 @@ body {
 }
 
 .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .swiper-pagination {
