@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+/* .container {
+    width: 500px;
+    height: 510px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  } */
+
+.info__card {
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  padding-bottom: 4px;
+}
+.info__card p {
+  margin: 0;
+}
+.prfile__pic--img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: 240px;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+.images a {
+  margin: 2px;
+  display: block;
+  width: calc((100% - 12px) / 3);
+}
+.images a img {
+  border-radius: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+.images a:nth-child(odd) img {
+  height: 170px;
+}
+.images a:nth-child(even) img {
+  height: 170px;
+}
+.follow__brand {
+  text-align: center;
+  color: #8f7d7d;
+  padding-top: 20px;
+}
+.brand__img {
+  width: 80px;
+}
+

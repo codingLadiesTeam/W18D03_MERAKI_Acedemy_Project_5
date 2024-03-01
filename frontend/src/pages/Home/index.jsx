@@ -74,7 +74,7 @@ const Home = () => {
                 meeting schedule & appointments for entire planning process
                 Managing all event orders, revisions & evolving details.
               </p>
-              <a className="button arrow" id="with" href="/portfolio">
+              <a className="button arrow" id="with" href="/portfolio" style={{alignSelf:"flex-start",justifySelf:"left",marginLeft:"0",padding:"0"}}>
                 Let your eyes shine
               </a>
             </div>
@@ -94,7 +94,7 @@ const Home = () => {
                 installs and plans designed for guest experience Managing the
                 printing suite design and presence.
               </p>
-              <a className="button arrow" id="with" style={{alignSelf:"flex-start",justifySelf:"left",marginLeft:"0",padding:"0"}} href="/portfolio">
+              <a className="button arrow" id="with" style={{alignSelf:"flex-start",justifySelf:"left",marginLeft:"0",padding:"0"}} href="/client">
                 Don't hesitate to take a look
               </a>
             </div>
@@ -132,7 +132,7 @@ const Home = () => {
                 to manage onsite expectations Guest & Timeline Management
                 throughout the experience Overseeing cleanup & load out of all.
               </p>
-              <a className="button arrow" id="with" href="/portfolio">
+              <a className="button arrow" id="with" href="/letstalk">
                 CONTACT US TO GET STARTED{" "}
               </a>
             </div>
