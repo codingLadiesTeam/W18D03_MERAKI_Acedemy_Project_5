@@ -14,8 +14,8 @@ export default function OrdersTable() {
     
     const [orders, setOrders] = useState([])
     const getAllOrders=()=>{
-        //http://localhost:5000/orders/allOrders axios
-          axios.get(`http://localhost:5000/orders/allOrders`)
+        //https://farah-for-events.onrender.com/orders/allOrders axios
+          axios.get(`https://farah-for-events.onrender.com/orders/allOrders`)
           .then((result) => {
            console.log(result.data.result);
           setOrders(result.data.result)
