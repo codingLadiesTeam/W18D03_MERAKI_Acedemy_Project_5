@@ -19,7 +19,7 @@ import {
   MDBBtnGroup 
 } from "mdb-react-ui-kit";
 
-//http://localhost:5000/service/byStatus?status=pending
+//https://farah-for-events.onrender.com/service/byStatus?status=pending
 
 
 
@@ -32,7 +32,7 @@ const PendingServices = () => {
   );
     const getPendingService = () => {
         axios
-          .get("http://localhost:5000/service/byStatus?status=pending")
+          .get("https://farah-for-events.onrender.com/service/byStatus?status=pending")
           .then((result) => {
            console.log(result.data.result);
            dispatch(setPendingServices(result.data.result));
@@ -47,7 +47,7 @@ const PendingServices = () => {
   //---------------------------handel confirm /reject btn
       const handelStatus = (status,id) => {
          axios
-          .put(`http://localhost:5000/service/${id}`,
+          .put(`https://farah-for-events.onrender.com/service/${id}`,
           {status},
           {
             headers: { Authorization: `Bearer ${token}` },

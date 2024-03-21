@@ -62,7 +62,7 @@ const ServiceProvider = () => {
   const deleteService = (id) => {
     console.log("serviceId", id);
     axios
-    .delete(`http://localhost:5000/service/${id}`, {
+    .delete(`https://farah-for-events.onrender.com/service/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -81,7 +81,7 @@ const ServiceProvider = () => {
   const updateService = () => {
     axios
       .put(
-        `http://localhost:5000/service/provider/update/${serviceId}`,
+        `https://farah-for-events.onrender.com/service/provider/update/${serviceId}`,
         {
           service_name,
           details,
@@ -115,7 +115,7 @@ const ServiceProvider = () => {
 
   const getServiceProvider = () => {
     axios
-      .get("http://localhost:5000/service/provider", {
+      .get("https://farah-for-events.onrender.com/service/provider", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

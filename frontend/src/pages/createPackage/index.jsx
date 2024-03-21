@@ -53,7 +53,7 @@ const CreatePackage = () => {
   });
   const getPackages = () => {
     axios
-      .get(`http://localhost:5000/package`)
+      .get(`https://farah-for-events.onrender.com/package`)
       .then((result) => {
         console.log("first", result.data.result);
 
@@ -68,7 +68,7 @@ const CreatePackage = () => {
   useEffect(() => {
     //getPackages()
     axios
-      .get(`http://localhost:5000/package/servicePackage`, {})
+      .get(`https://farah-for-events.onrender.com/package/servicePackage`, {})
       .then((result) => {
         getPackages();
         console.log("result.data", result.data.result);
@@ -89,7 +89,7 @@ const CreatePackage = () => {
     // setShowSubmit(false)
     try {
       const order = await axios.get(
-        `http://localhost:5000/orders/search_1/${orderId}`
+        `https://farah-for-events.onrender.com/orders/search_1/${orderId}`
       );
       console.log("order", order);
       setOrderDetails(order.data.result[0]);
@@ -108,7 +108,7 @@ const CreatePackage = () => {
 
     try {
       const orderResult = await axios.post(
-        `http://localhost:5000/orders/create`,
+        `https://farah-for-events.onrender.com/orders/create`,
         orderData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -134,7 +134,7 @@ const CreatePackage = () => {
 
       //selected packages with the created order
       const orderPackageResult = await axios.post(
-        `http://localhost:5000/orders/orderService/${orderResult.data.result[0].order_id}`,
+        `https://farah-for-events.onrender.com/orders/orderService/${orderResult.data.result[0].order_id}`,
         { service_package_id: checkedPackages },
         {
           headers: { Authorization: `Bearer ${token}` },

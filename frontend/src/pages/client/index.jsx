@@ -48,7 +48,7 @@ const Client = () => {
   //...................................................................................
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/service`)
+      .get(`https://farah-for-events.onrender.com/service`)
       .then((services) => {
         console.log("services", services.data);
         setServices(services.data.services);
@@ -69,7 +69,7 @@ const Client = () => {
     //loader
     try {
       const orderResult = await axios.post(
-        `http://localhost:5000/orders/create`,
+        `https://farah-for-events.onrender.com/orders/create`,
         orderData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -79,7 +79,7 @@ const Client = () => {
       setOrderId(orderResult.data.result[0].order_id);
       //selected services with the created order
       const orderServiceResult = await axios.post(
-        `http://localhost:5000/orders/orderService/${orderResult.data.result[0].order_id}`,
+        `https://farah-for-events.onrender.com/orders/orderService/${orderResult.data.result[0].order_id}`,
         { service_ids: checkedServices },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -139,7 +139,7 @@ const Client = () => {
   const getOrderDetails = async (orderId) => {
     try {
       const order = await axios.get(
-        `http://localhost:5000/orders/search_1/${orderId}`
+        `https://farah-for-events.onrender.com/orders/search_1/${orderId}`
       );
       console.log("Detailsorder", order);
       console.log("date", order.data.result[0].eventdate);

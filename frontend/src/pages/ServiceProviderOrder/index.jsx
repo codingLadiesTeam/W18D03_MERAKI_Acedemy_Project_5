@@ -12,7 +12,7 @@ export default function ServiceProviderOrders() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/service/orders/all", {
+            .get("https://farah-for-events.onrender.com/service/orders/all", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
