@@ -31,8 +31,7 @@ const PendingServices = () => {
       
       state.auth
   );
-  
-  
+  const [loadingStatus, setLoadingStatus] = useState(true);
   
     const getPendingService = () => {
         axios

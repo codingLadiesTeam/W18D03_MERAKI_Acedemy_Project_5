@@ -98,7 +98,7 @@ const getAllOrders = (req, res) => {
   s.image,
 u.userName,
 u.email,
-
+o.phone
 FROM 
   orders o
   JOIN orders_services os ON o.order_id = os.order_id

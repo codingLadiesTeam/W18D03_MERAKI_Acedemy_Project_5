@@ -64,7 +64,7 @@ const [package_id, setPackageId] = useState(null)
     try {
       const imageUrl = await uploadImage(image);
       const packageResult = await axios.post(
-        `http://localhost:5000/package/create`,
+        `https://farah-for-events.onrender.com/package/create`,
        {...packageInfo,image:imageUrl},
       );
 
@@ -77,7 +77,7 @@ const [package_id, setPackageId] = useState(null)
       //""
       const packageServiceResult = await axios.post(
         
-        `http://localhost:5000/package/create/servicePackage/${packageResult.data.result.package_id}`,
+        `https://farah-for-events.onrender.com/package/create/servicePackage/${packageResult.data.result.package_id}`,
         { service_ids: checkedServices },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -138,7 +138,7 @@ const [package_id, setPackageId] = useState(null)
 
 const callServices=()=>{
   axios
-  .get(`http://localhost:5000/service`, {
+  .get(`https://farah-for-events.onrender.com/service`, {
     
   })
   .then((result) => {

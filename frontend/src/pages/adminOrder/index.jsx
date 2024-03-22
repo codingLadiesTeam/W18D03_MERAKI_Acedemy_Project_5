@@ -6,20 +6,17 @@ import { InputText } from 'primereact/inputtext';
 import { Tag } from 'primereact/tag';
 import axios from 'axios';
 import './style.css'; 
-
-import Loading from '../../components/loader';
+import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 
 export default function OrdersTable() {
-  const [loadingStatus, setLoadingStatus] = useState(true);
     
     const [orders, setOrders] = useState([])
     const getAllOrders=()=>{
-        //https://farah-for-events.onrender.com/orders/allOrders axios
+        //http://localhost:5000/orders/allOrders axios
           axios.get(`https://farah-for-events.onrender.com/orders/allOrders`)
           .then((result) => {
            console.log(result.data.result);
           setOrders(result.data.result)
-          setLoadingStatus(false)
           })
           .catch((err) => {
             console.log(err);
@@ -85,8 +82,7 @@ const statusBodyTemplate = (rowData) => {
 
 
   return (
-    <>
-    {loadingStatus? <> <Loading/> </> :<> <div  style={{margin:"10px", marginRight:"60px", height:"90vh"}}>
+    <div  style={{margin:"10px", marginRight:"60px", height:"90vh"}}>
       <div style={{fontFamily:""}} className="mx-auto card col-10 m-5">
             <DataTable
                 value={orders}
@@ -108,8 +104,6 @@ const statusBodyTemplate = (rowData) => {
             </DataTable>
         </div>
    
-    </div></>}
-   
-    </>
+    </div>
   );
 }
