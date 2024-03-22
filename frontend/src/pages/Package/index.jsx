@@ -46,7 +46,7 @@ const Packages = () => {
   //-----------------------------
   const getPackages = () => {
     axios
-      .get(`http://localhost:5000/package`)
+      .get(`https://farah-for-events.onrender.com/package`)
       .then((result) => {
         console.log("first", result.data.result);
 
@@ -61,7 +61,7 @@ const Packages = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/package/servicePackage`, {})
+      .get(`https://farah-for-events.onrender.com/package/servicePackage`, {})
       .then((result) => {
         getPackages();
 
