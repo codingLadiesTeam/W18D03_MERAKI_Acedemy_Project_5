@@ -35,7 +35,7 @@ const CreateService = () => {
         try {
             const imageUrl = await uploadImage(image);
             const result = await axios.post(
-                "http://localhost:5000/service",
+                "https://farah-for-events.onrender.com/service",
                 { service_name, details, price, image: imageUrl },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
