@@ -59,6 +59,105 @@ function Login() {
     }
   };
 
+
+  const  adminGuest=async()=>{  
+    try {
+      const result = await axios.post("https://farah-for-events.onrender.com/users/login", {
+        email:"hadeel@gmail.com",
+        password:"1234",
+      });
+      console.log("result", result.data);
+      if (result.data) {
+        dispatch(setLogin(result.data.token));
+        dispatch(setUserId(result.data.userId));
+        dispatch(seRole(result.data.role));
+
+        dispatch(setUserName(result.data.username));
+
+        if (result.data.role === 1) {
+          navigate("/admin/dashboard/pending/Services");
+        } else if (result.data.role === 2) {
+          navigate("/service/provider");
+        } else if (result.data.role === 3) {
+          navigate("/client");
+        }
+      } else {
+        throw new Error("Invalid response from server");
+      }
+    } catch (error) {
+      if (error.response && error.response.data) {
+        setErrorMessage(error.response.data.message);
+      } else {
+        setErrorMessage("Error occurred while logging in. Please try again.");
+      }
+    }
+ }
+  const  userGuest=async()=>{  
+    try {
+      const result = await axios.post("https://farah-for-events.onrender.com/users/login", {
+        email:"aya@gmail.com",
+        password:"1234",
+      });
+      console.log("result", result.data);
+      if (result.data) {
+        dispatch(setLogin(result.data.token));
+        dispatch(setUserId(result.data.userId));
+        dispatch(seRole(result.data.role));
+
+        dispatch(setUserName(result.data.username));
+
+        if (result.data.role === 1) {
+          navigate("/admin/dashboard/pending/Services");
+        } else if (result.data.role === 2) {
+          navigate("/service/provider");
+        } else if (result.data.role === 3) {
+          navigate("/client");
+        }
+      } else {
+        throw new Error("Invalid response from server");
+      }
+    } catch (error) {
+      if (error.response && error.response.data) {
+        setErrorMessage(error.response.data.message);
+      } else {
+        setErrorMessage("Error occurred while logging in. Please try again.");
+      }
+    }
+ }
+
+
+ const  providerGuest=async()=>{  
+  try {
+    const result = await axios.post("https://farah-for-events.onrender.com/users/login", {
+      email:"amal@gmail.com",
+      password:"123456",
+    });
+    console.log("result", result.data);
+    if (result.data) {
+      dispatch(setLogin(result.data.token));
+      dispatch(setUserId(result.data.userId));
+      dispatch(seRole(result.data.role));
+
+      dispatch(setUserName(result.data.username));
+
+      if (result.data.role === 1) {
+        navigate("/admin/dashboard/pending/Services");
+      } else if (result.data.role === 2) {
+        navigate("/service/provider");
+      } else if (result.data.role === 3) {
+        navigate("/client");
+      }
+    } else {
+      throw new Error("Invalid response from server");
+    }
+  } catch (error) {
+    if (error.response && error.response.data) {
+      setErrorMessage(error.response.data.message);
+    } else {
+      setErrorMessage("Error occurred while logging in. Please try again.");
+    }
+  }
+}
   return (
     <>
       <Navbar />
@@ -111,6 +210,36 @@ function Login() {
                   onClick={handleLoginClick}
                 >
                   Login
+                </MDBBtn>
+                <h5
+                  className="fw-normal mb-2 pb-2"
+                  style={{ letterSpacing: "1px", textAlign:"center" }}
+                >
+                  Or
+                </h5>
+                <MDBBtn
+                  className="mb-4 px-4"
+                  color="dark"
+                  size="lg"
+                  onClick={adminGuest} 
+                >
+                  Login as guest Admin
+                </MDBBtn>
+                <MDBBtn
+                  className="mb-4 px-4"
+                  color="dark"
+                  size="lg"
+                  onClick={userGuest} 
+                >
+                  Login as guest user
+                </MDBBtn>
+                <MDBBtn
+                  className="mb-4 px-3"
+                  color="dark"
+                  size="lg"
+                  onClick={providerGuest} 
+                >
+                  Login as guest provider
                 </MDBBtn>
                 <p className="text-danger">{errorMessage}</p>
                 <a className="small text-muted" href="#!">
